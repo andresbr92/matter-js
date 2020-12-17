@@ -48,8 +48,8 @@ function snowBall() {
   
   let numBalls = 400
   for (let i = 0; i < numBalls; i++) {
-    let xPos = wBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.cos(i * 2 * Math.PI / numBalls)
-    let yPos = hBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.sin(i * 2 * Math.PI / numBalls)
+    let xPos = wBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.cos(i * 8 * Math.PI / numBalls)
+    let yPos = hBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.sin(i * 8 * Math.PI / numBalls)
     console.log(xPos, yPos)
     let mfBall = Bodies.circle(
       xPos,
