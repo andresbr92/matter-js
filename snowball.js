@@ -46,11 +46,10 @@ function snowBall() {
   let mfArray = [];
   const mfRadius = sbRadius / 27;
   
-  let numBalls = 400
+  let numBalls = 300
   for (let i = 0; i < numBalls; i++) {
     let xPos = wBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.cos(i * 8 * Math.PI / numBalls)
     let yPos = hBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.sin(i * 8 * Math.PI / numBalls)
-    console.log(xPos, yPos)
     let mfBall = Bodies.circle(
       xPos,
       yPos,
@@ -172,20 +171,19 @@ function snowBall() {
     //add boddies deleted again inside ball
 	if (mfArray.length < 200) {
 		
-		console.log('estaoy poerdiendo bolas')
 		for(let j = 0; j < (200-mfArray.length); j++){
 			let mfBall = Bodies.circle(
 				wBall / 2,
 				hBall / 2,
 				Common.random(mfRadius, mfRadius / 1.3),
-				{ render: { fillStyle: "#fff", strokeStyle: "#fff" } }
+				{ render: { fillStyle: Common.choose(['#008f39', '#f80000', '#efb810']) } }
 			);
 			mfArray.push(mfBall);
 			World.add(world,mfBall);
 		}
 		//World.add(world,mfArray);
 	}
-	console.log(mfArray.length)
+
   }, 200);
 
   // fit the render viewport to the scene
@@ -197,7 +195,6 @@ function snowBall() {
 
 function setAlphaValue(){
 	let d = new Date;
-	console.log(d.getTime()+", alphaValue: "+alphaValue);
 	alphaValue += 0.2;
     if(alphaValue >= 1.0){
   	shakeFinished = true;
