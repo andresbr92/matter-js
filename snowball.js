@@ -169,9 +169,9 @@ function snowBall() {
       }
     });
     //add boddies deleted again inside ball
-	if (mfArray.length < 200) {
+	if (mfArray.length < numBalls) {
 		
-		for(let j = 0; j < (200-mfArray.length); j++){
+		for(let j = 0; j < (numBalls-mfArray.length); j++){
 			let mfBall = Bodies.circle(
 				wBall / 2,
 				hBall / 2,
