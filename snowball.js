@@ -173,9 +173,9 @@ function snowBall() {
 		
 		for(let j = 0; j < (numBalls-mfArray.length); j++){
 			let mfBall = Bodies.circle(
-				wBall / 2,
-				hBall / 2,
-				Common.random(mfRadius, mfRadius / 1.3),
+				wBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.cos(i * 8 * Math.PI / numBalls),
+				hBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.sin(i * 8 * Math.PI / numBalls),
+				Common.random(mfRadius, mfRadius / 1.5),
 				{ render: { fillStyle: Common.choose(['#008f39', '#f80000', '#efb810']) } }
 			);
 			mfArray.push(mfBall);
