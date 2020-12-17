@@ -52,8 +52,8 @@ function snowFlakes() {
 
       //generating snowFlakes
           //random scale
-      let ramdomScale =  Common.random(mfRadius/100, mfRadius/130)
-      let ramdomScale2 = Common.random(mfRadius/100, mfRadius/130)
+      let ramdomScale =  Common.random(mfRadius/90, mfRadius/100)
+      let ramdomScale2 = Common.random(mfRadius/90, mfRadius/100)
   
       World.add(world, [
         Bodies.circle(

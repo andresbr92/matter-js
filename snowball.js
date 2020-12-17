@@ -44,7 +44,7 @@ function snowBall() {
 
   // miniflakes
   let mfArray = [];
-  const mfRadius = sbRadius / 30;
+  const mfRadius = sbRadius / 27;
   
   let numBalls = 400
   for (let i = 0; i < numBalls; i++) {
@@ -54,8 +54,8 @@ function snowBall() {
     let mfBall = Bodies.circle(
       xPos,
       yPos,
-      Common.random(mfRadius, mfRadius / 1.3),
-      { render: { fillStyle: "#fff", strokeStyle: "#fff" } }
+      Common.random(mfRadius, mfRadius / 1.5),
+      { render: { fillStyle: Common.choose(['#008f39', '#f80000', '#efb810'])  } }
     );
 
     mfArray.push(mfBall);
