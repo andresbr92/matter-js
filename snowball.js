@@ -46,7 +46,7 @@ function snowBall() {
   let mfArray = [];
   const mfRadius = sbRadius / 27;
   
-  let numBalls = 300
+  let numBalls = 200
   for (let i = 0; i < numBalls; i++) {
     let xPos = wBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.cos(i * 8 * Math.PI / numBalls)
     let yPos = hBall / 2 + (innerSmallBallRadius + (sbRadius - innerSmallBallRadius) * i / numBalls ) * Math.sin(i * 8 * Math.PI / numBalls)
